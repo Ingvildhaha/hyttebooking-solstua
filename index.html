@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hyttebooking</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FullCalendar CSS (global build) -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Hyttebooking Solstua</h1>
+        <p class="subtitle">Her kan du reserve hytta, og få oversikt over hvem som har planlagt en tur.</p>
+               
+        <div id="calendar"></div>
+        
+        
+        <!-- Modal for booking -->
+        <div id="modalOverlay" class="hidden">
+            <div id="modal">
+                <h2 id="modalTitle">Ny booking</h2>
+                <form id="bookingForm">
+                    <label>
+                        Navn:
+                        <input type="text" id="name" required />
+                    </label>
+                    <label>
+                        Startdato:
+                    <input type="date" id="startDate" required />
+                </label>
+                <label>
+                    Sluttdato:
+                    <input type="date" id="endDate" required />
+                    </label>
+                    <label>
+                        Kommentar:
+                        <input type="text" id="comment" placeholder="Valgfritt" />
+                    </label>
+        
+        <fieldset>
+            <legend>Velg soverom</legend>
+            <label>
+                <input type="checkbox" id="room1" />
+                Hovedsoverom
+            </label>
+            <label>
+                <input type="checkbox" id="room2" />
+                Gjesterom
+            </label>
+            <label>
+                <input type="checkbox" id="room3" />
+                Familierom
+            </label>
+        </fieldset>
+        
+        <div class="button-row">
+            <button type="submit" id="saveButton">Lagre</button>
+            <button type="button" id="deleteButton" class="danger">Slett</button>
+            <button type="button" id="cancelButton">Avbryt</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+<!-- Firebase (compat) -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+
+<!-- FullCalendar JS (global build) – MÅ komme før app.js -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales/nb.global.min.js"></script>
+
+<!-- Din kode -->
+<script src="app.js"></script>
+</body>
+</html>
