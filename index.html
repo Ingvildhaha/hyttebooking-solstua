@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hyttebooking</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- FullCalendar CSS (global build) -->
+  <link rel="stylesheet" href="style.css" /> //Min CSS
+  // FullCalendar CSS (global build) 
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="main-container">
         <h1>Hyttebooking Solstua</h1>
@@ -15,8 +15,7 @@
                
         <div id="calendar"></div>
         
-        
-        <!-- Modal for booking -->
+        //Modal for booking, hidden til vanlig
         <div id="modalOverlay" class="hidden">
             <div id="modal">
                 <h2 id="modalTitle">Ny booking</h2>
@@ -64,16 +63,16 @@
 </div>
 </div>
 
-<!-- Firebase (compat) -->
+//Firebase (compat)
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
 
-<!-- FullCalendar JS (global build) – MÅ komme før app.js -->
+//FullCalendar JS (global build) 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.8/locales/nb.global.min.js"></script>
 
-<!-- Din kode -->
+// Min kode
 <script src="app.js"></script>
 </body>
 </html>
